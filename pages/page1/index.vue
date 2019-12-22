@@ -2,7 +2,7 @@
 div
   .container
     div
-      p page1
+      p.title page1
       Logo
       div
         button(@click="$router.back()") back
@@ -21,5 +21,8 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style scoped>
+.title {
+  color: red;
+}
 </style>

@@ -2,7 +2,7 @@
 div
   .container
     div
-      p page2
+      p.title page2
       NuxtLink(to="/") top
 </template>
 
@@ -18,5 +18,9 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style scoped>
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
 </style>

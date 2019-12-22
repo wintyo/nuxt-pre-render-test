@@ -11,18 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: setup
+      - name: Setup
         uses: actions/setup-node@v1
         with:
           node-version: '10.x'
 
-      - name: install
+      - name: Install
         run: yarn install
 
-      - name: build
+      - name: Build
         run: yarn generate
 
-      - name: deploy
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v2
         env:
           PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}

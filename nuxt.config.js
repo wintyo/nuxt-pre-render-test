@@ -15,6 +15,10 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  server: {
+    port: 8080,
+    host: '0.0.0.0'
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -23,6 +27,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/main.scss',
   ],
   /*
   ** Plugins to load before mounting the App

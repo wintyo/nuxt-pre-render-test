@@ -1,0 +1,63 @@
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+// フェードアニメーション
+.fade {
+  &-enter {
+    &-active {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    &-to {
+      opacity: 1;
+    }
+  }
+
+  &-leave {
+    &-active {
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+
+    &-to {
+      opacity: 0;
+    }
+  }
+}
+
+// 画面遷移アニメーション（デフォルトはpage）
+.page {
+  &-enter {
+    &-active {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    &-to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &-leave {
+    &-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    &-to {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+}
+

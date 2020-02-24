@@ -3,6 +3,7 @@ div
   .container
     div
       p.title page2
+      p {{ $data }}
       NuxtLink(to="/") top
 </template>
 
@@ -12,6 +13,16 @@ import Vue from 'vue'
 import Logo from '~/components/Logo.vue'
 
 export default Vue.extend({
+  asyncData() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log('fetch');
+        resolve({
+          title: 'テスト'
+        });
+      }, 100);
+    });
+  },
   components: {
     Logo
   }

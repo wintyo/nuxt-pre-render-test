@@ -13,5 +13,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "semi": "off",
+    "space-before-function-paren": "off",
+    "nuxt/no-timing-in-fetch-data": "off"
   }
 }
